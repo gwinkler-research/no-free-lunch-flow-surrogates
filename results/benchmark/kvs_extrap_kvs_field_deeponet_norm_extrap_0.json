@@ -1,0 +1,38 @@
+{
+  "metrics": {
+    "fft_freq_err_mean": 0.4588290155455883,
+    "fft_freq_err_median": 0.2056268932713807,
+    "power_ratio": 0.0012666979921254185,
+    "var_ratio_unweighted": 0.013211791033427822,
+    "rollout_rmse": 1.0925627103667495,
+    "rollout_rmse_p": 2.891109972802458,
+    "rmse_warped": 1.3802903617585522,
+    "onset_latency_v11_mean_abs_dt": 0.24369999930262565,
+    "onset_latency_v11_median_dt": 0.1600000262260437,
+    "onset_latency_v11_std_dt": 0.23264047364904694,
+    "onset_latency_v11_n_finite": 200
+  },
+  "meta": {
+    "dataset": "kvs",
+    "split": "extrap",
+    "model": "kvs_field_deeponet_norm_extrap",
+    "seed": 0,
+    "target_type": "field",
+    "created_utc": "2026-06-01T10:06:31.377218+00:00",
+    "train_wallclock_s": 35821.64680099487,
+    "infer_latency_ms": 60.20609974861145,
+    "config_hash": "c3e17b8ff9034e8f",
+    "n_params": 432515,
+    "coord_bbox": [
+      [
+        -2.806037037145393e-19,
+        2.200000047683716
+      ],
+      [
+        -4.532535132508549e-19,
+        0.4099999964237213
+      ]
+    ],
+    "best_epoch": 3238
+  }
+}

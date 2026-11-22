@@ -1,0 +1,46 @@
+{
+ "gate": "pair kept iff fft_peak(true trace) is finite and > 1e-9 (peak away from zero frequency)",
+ "window_s": 2.0,
+ "n_probes": 12,
+ "splits": {
+  "interp": {
+   "truth_npz": "results/benchmark/truth/kvs_interp.npz",
+   "truth_sha256": "9f6129dd5c05cf83c0e3d8c2f51c95685add8d9011ca1016899084fa87d058c8",
+   "n_cases": 138,
+   "n_pairs": 1656,
+   "n_kept": 1642,
+   "n_dropped": 14,
+   "n_cases_subcritical": 17,
+   "n_pairs_subcritical": 204,
+   "n_kept_subcritical": 193,
+   "dropped_case_ids": [
+    "Umax_05_tau_08",
+    "Umax_06_tau_00",
+    "Umax_06_tau_10",
+    "Umax_06_tau_14",
+    "Umax_06_tau_18",
+    "Umax_07_tau_05",
+    "Umax_07_tau_06",
+    "Umax_07_tau_19",
+    "Umax_09_tau_09",
+    "Umax_09_tau_11",
+    "Umax_09_tau_12",
+    "Umax_11_tau_04",
+    "Umax_11_tau_07",
+    "Umax_12_tau_18"
+   ]
+  },
+  "extrap": {
+   "truth_npz": "results/benchmark/truth/kvs_extrap.npz",
+   "truth_sha256": "4ef53d155cf2f604134a943efbdf020b7e7c887e3da24df493ee08d54902dbb7",
+   "n_cases": 200,
+   "n_pairs": 2400,
+   "n_kept": 2400,
+   "n_dropped": 0,
+   "n_cases_subcritical": 0,
+   "n_pairs_subcritical": 0,
+   "n_kept_subcritical": 0,
+   "dropped_case_ids": []
+  }
+ }
+}

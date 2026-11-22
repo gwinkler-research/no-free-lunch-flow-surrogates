@@ -1,0 +1,142 @@
+{
+ "meta": {
+  "pipeline": "decode(encode(truth)) via _Pod3dEncoder(k) -> gate2_metrics (identical to the film model evaluation)",
+  "date": "2026-09-21",
+  "seed": 1,
+  "ks": [
+   8,
+   16,
+   32
+  ]
+ },
+ "interp": {
+  "n_cases": 15,
+  "case_ids": [
+   "sweep2_20260405-0752-49-ds_001",
+   "sweep2_20260405-1802-54-ds_016",
+   "sweep2_20260405-1750-37-ds_014",
+   "sweep2_20260408-1329-49-ds_057",
+   "sweep2_20260409-0306-18-ds_072",
+   "sweep2_20260406-0332-08-ds_024",
+   "sweep2_20260410-1602-15-ds_094",
+   "sweep2_20260410-1523-49-ds_091",
+   "sweep2_20260409-0237-48-ds_069",
+   "sweep2_20260407-0209-42-ds_033",
+   "sweep2_20260408-1418-27-ds_061",
+   "sweep2_20260410-0326-14-ds_082",
+   "sweep2_20260405-0752-57-ds_002",
+   "sweep2_20260407-1518-18-ds_048",
+   "sweep2_20260407-1417-33-ds_043"
+  ],
+  "encoder_ref": "results/benchmark/encoders/cmp3d_interp_pod139_fix.npz",
+  "npz": "data/cmp/cmp3d_full100fix_fem_training.npz",
+  "config": "configs/paper_cmp3d_interp_latent_ar_s4d_k8_fix.yaml",
+  "k8": {
+   "nrmse_3d": 0.5378732681274414,
+   "nrmse_inplane": 0.1793530434370041,
+   "nrmse_z": 0.8964307308197021,
+   "wafer_rmse": 1.024279236793518,
+   "cumwss_rel_l2_inner_mean": 0.06494828470915504,
+   "rmse_steady_inner90": 0.11634184966484705,
+   "var_ratio_steady": 0.990118432044983,
+   "spatial_corr_inner90": 0.9861981238094896,
+   "onset_latency_excess": 0.0,
+   "radial_profile_l2": 1.6930202954848739,
+   "steady_drift_excess": -3.3799452126004326e-10,
+   "wiwnu_excess": 0.0073893887994025
+  },
+  "k16": {
+   "nrmse_3d": 0.5455740094184875,
+   "nrmse_inplane": 0.15058885514736176,
+   "nrmse_z": 0.920651376247406,
+   "wafer_rmse": 1.0121396780014038,
+   "cumwss_rel_l2_inner_mean": 0.03638642033867247,
+   "rmse_steady_inner90": 0.0643307063728571,
+   "var_ratio_steady": 0.9866872072219849,
+   "spatial_corr_inner90": 0.9954878253089701,
+   "onset_latency_excess": 0.0,
+   "radial_profile_l2": 0.719189956489619,
+   "steady_drift_excess": -4.6443370630792437e-10,
+   "wiwnu_excess": 0.004992958185901508
+  },
+  "k32": {
+   "nrmse_3d": 0.5040433406829834,
+   "nrmse_inplane": 0.12122213840484619,
+   "nrmse_z": 0.8560312390327454,
+   "wafer_rmse": 0.9181297421455383,
+   "cumwss_rel_l2_inner_mean": 0.016165074386383885,
+   "rmse_steady_inner90": 0.02716122195124626,
+   "var_ratio_steady": 0.9952189366022746,
+   "spatial_corr_inner90": 0.9988784138348098,
+   "onset_latency_excess": 0.0,
+   "radial_profile_l2": 0.21516155514261154,
+   "steady_drift_excess": 3.3060061355172366e-10,
+   "wiwnu_excess": 4.5243256016288166e-05
+  }
+ },
+ "extrap": {
+  "n_cases": 15,
+  "case_ids": [
+   "sweep2_20260405-0753-12-ds_004",
+   "sweep2_20260406-0319-26-ds_019",
+   "sweep2_20260406-0329-51-ds_022",
+   "sweep2_20260406-0331-59-ds_023",
+   "sweep2_20260407-1417-33-ds_043",
+   "sweep2_20260408-1342-09-ds_059",
+   "sweep2_20260408-1400-18-ds_060",
+   "sweep2_20260409-0123-10-ds_065",
+   "sweep2_20260409-1416-46-ds_074",
+   "sweep2_20260409-1503-08-ds_076",
+   "sweep2_20260409-1533-27-ds_078",
+   "sweep2_20260410-0416-44-ds_085",
+   "sweep2_20260410-0442-54-ds_086",
+   "sweep2_20260410-1553-57-ds_092",
+   "sweep2_20260411-0040-43-ds_097"
+  ],
+  "encoder_ref": "results/benchmark/encoders/cmp3d_extrap_pod139_fix.npz",
+  "npz": "data/cmp/cmp3d_full100fix_fem_training.npz",
+  "config": "configs/paper_cmp3d_extrap_latent_ar_s4d_k8_fix.yaml",
+  "k8": {
+   "nrmse_3d": 0.7880450487136841,
+   "nrmse_inplane": 0.22883978486061096,
+   "nrmse_z": 1.3260126113891602,
+   "wafer_rmse": 1.5048723220825195,
+   "cumwss_rel_l2_inner_mean": 0.07517894739846825,
+   "rmse_steady_inner90": 0.1559368411699931,
+   "var_ratio_steady": 1.0051846424738566,
+   "spatial_corr_inner90": 0.9795948678677168,
+   "onset_latency_excess": 0.000666666030883789,
+   "radial_profile_l2": 1.9979438433841792,
+   "steady_drift_excess": 7.238270427478711e-10,
+   "wiwnu_excess": 0.004674369345987332
+  },
+  "k16": {
+   "nrmse_3d": 0.7812244296073914,
+   "nrmse_inplane": 0.1831785887479782,
+   "nrmse_z": 1.3280911445617676,
+   "wafer_rmse": 1.54234778881073,
+   "cumwss_rel_l2_inner_mean": 0.04065210065990989,
+   "rmse_steady_inner90": 0.08521019741892814,
+   "var_ratio_steady": 0.997524086634318,
+   "spatial_corr_inner90": 0.9943210424103945,
+   "onset_latency_excess": 0.0,
+   "radial_profile_l2": 0.8415073524067471,
+   "steady_drift_excess": 1.1573533242881239e-10,
+   "wiwnu_excess": 0.005628775356849913
+  },
+  "k32": {
+   "nrmse_3d": 0.7855788469314575,
+   "nrmse_inplane": 0.16044487059116364,
+   "nrmse_z": 1.3416098356246948,
+   "wafer_rmse": 1.6024631261825562,
+   "cumwss_rel_l2_inner_mean": 0.015343972288505436,
+   "rmse_steady_inner90": 0.03091877835492293,
+   "var_ratio_steady": 0.9956637541453044,
+   "spatial_corr_inner90": 0.9990846110746062,
+   "onset_latency_excess": 0.0,
+   "radial_profile_l2": 0.24203701257084212,
+   "steady_drift_excess": 2.55475640642544e-10,
+   "wiwnu_excess": 0.0006506117311880111
+  }
+ }
+}

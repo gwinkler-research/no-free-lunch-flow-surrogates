@@ -1,0 +1,39 @@
+{
+  "metrics": {
+    "fft_freq_err_mean": 9.727481411349904e-05,
+    "fft_freq_err_median": 5.462944852139265e-05,
+    "power_ratio": 0.7440652274595825,
+    "var_ratio_unweighted": 0.7368046642678604,
+    "rollout_rmse": 0.2902921789545338,
+    "rollout_rmse_p": 1.2200301665534588,
+    "rmse_warped": 0.326109193990315
+  },
+  "meta": {
+    "dataset": "kvs",
+    "split": "extrap",
+    "model": "convae_83x442_floor",
+    "seed": 0,
+    "target_type": "field",
+    "created_utc": "2026-09-08T15:04:28.129845+00:00",
+    "train_wallclock_s": null,
+    "infer_latency_ms": 2121.885417699814,
+    "config_hash": "0dbdfd5fe8836bfa",
+    "n_params": 11027555,
+    "encoder_sha256": "3d1716fef10de993b128dca3a76032d27b73de5e35b69065f97ee7ab534abd4c",
+    "encoder_file": "results/benchmark/encoders/kvs_extrap_convae_83x442_bc32.pt",
+    "floor_of": "encode->decode round trip of the test fields through the frozen encoder",
+    "encoder_ref": "results/benchmark/encoders/kvs_extrap_convae_83x442_bc32.pt",
+    "roundtrip_floor": {
+      "rel_l2": 0.22375144064426422,
+      "fft_freq_err_mean": 0.012181967496235863,
+      "fft_freq_err_median": 7.19261813290163e-05,
+      "power_ratio": 0.7980605750279356,
+      "n_test_cases": 200,
+      "grid_hw": [
+        83,
+        442
+      ]
+    },
+    "best_epoch": -1
+  }
+}

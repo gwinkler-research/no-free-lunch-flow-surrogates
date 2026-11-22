@@ -1,0 +1,36 @@
+{
+  "metrics": {
+    "fft_freq_err_mean": 0.0280579521329051,
+    "fft_freq_err_median": 0.00010478415802689671,
+    "power_ratio": 0.9078717477798477,
+    "var_ratio_unweighted": 4.741580259892355,
+    "rollout_rmse": 0.09055350981221127,
+    "rollout_rmse_p": 0.34406809349838746,
+    "rmse_warped": 0.08034607665109905
+  },
+  "meta": {
+    "dataset": "kvs",
+    "split": "interp",
+    "model": "convae_83x442",
+    "seed": 0,
+    "target_type": "field",
+    "created_utc": "2026-09-07T18:26:29.670680+00:00",
+    "train_wallclock_s": 3793.291956424713,
+    "infer_latency_ms": 2146.858078846033,
+    "config_hash": "b113889b6250826d",
+    "n_params": 11027555,
+    "encoder_ref": "results/benchmark/encoders_clean/kvs_interp_convae_83x442_bc32.pt",
+    "roundtrip_floor": {
+      "rel_l2": 0.08635122328996658,
+      "fft_freq_err_mean": 0.08658112945712453,
+      "fft_freq_err_median": 0.00017442631946908263,
+      "power_ratio": 0.9324878376986998,
+      "n_test_cases": 138,
+      "grid_hw": [
+        83,
+        442
+      ]
+    },
+    "best_epoch": 300
+  }
+}

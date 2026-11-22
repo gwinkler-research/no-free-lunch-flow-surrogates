@@ -1,0 +1,45 @@
+# KVS interp, Mamba-branch DeepONet row (latent x AR), seeds 1-3.
+# Encoder: interp ConvAE from paper_kvs_interp_convae_83x442_clean.yaml (suffix = weight hash).
+# 4000 epochs, one optimiser step per epoch on batch_size random training cases. Rollout
+# curriculum from 1 to 100 steps (300 epochs at one step, then a 600-epoch ramp), variance
+# penalty 0.3 once the rollout reaches five steps. best.pt: validation rollout MSE, checked
+# every val_every epochs from epoch 700 on.
+dataset: kvs
+split: interp
+adapter: latent_dynamics
+model_name: mamba_1phase4k_clean
+dynamics: mamba_branch_don
+encoder_ref: results/benchmark/encoders_clean/kvs_interp_convae_83x442_bc32_47132e7b07.pt
+chunk_roots:
+- results/refined_4x_2026-05-07/chunk_01
+- results/refined_4x_2026-05-07/chunk_02
+- results/refined_4x_2026-05-07/chunk_03
+- results/refined_4x_2026-05-07/chunk_04_20260509_220406
+mesh_npz: meshes/refined_4x/mesh.npz
+grid_hw:
+- 83
+- 442
+raster_cache: results/benchmark/cache/kvs_grid_83x442.npz
+model:
+  branch_width: 128
+  branch_n_layers: 4
+  mamba_d_state: 16
+  mamba_d_conv: 4
+  mamba_expand: 2
+  trunk_width: 512
+  trunk_depth: 5
+  basis_dim: 128
+  epochs: 4000
+  batch_size: 64
+  lr: 0.0005
+  weight_decay: 0.0001
+  rollout_max_phase1: 100
+  rollout_warmup_phase1: 300
+  rollout_ramp_phase1: 600
+  var_lambda_phase1: 0.3
+  grad_clip_phase1: 0.5
+  best_mature_epoch_phase1: 700
+  val_every: 25
+  device: auto
+  ds_fd: span
+require_h5: false

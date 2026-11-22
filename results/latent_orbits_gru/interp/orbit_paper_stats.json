@@ -1,0 +1,153 @@
+{
+ "source": {
+  "latents_npz": "results/latent_orbits_gru/interp/latents.npz",
+  "sha256": "f82255f48ea3f10d143987984db2b54f76e7d294f2e00f262de4d0ddede6e716"
+ },
+ "definitions": {
+  "steady_window_s": 2.0,
+  "late_window_s": 2.5,
+  "t_star_s": 3.0,
+  "umax_split": 2.5,
+  "neighbour_gap_threshold": "quarter turn (pi/2)",
+  "shedding_band": "dominant truth bin +- 1 bin, df = 0.495 Hz",
+  "phase": "analytic-signal phase of the first global PC of the truth latents",
+  "radius": "RMS distance to the truth's steady-window mean, over the truth's own"
+ },
+ "n_test_cases": 138,
+ "n_all_cases": 782,
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "latent_power": {
+  "ar": [
+   0.9087875485420227,
+   0.9140071272850037,
+   0.9079503417015076
+  ],
+  "os": [
+   0.5384056568145752,
+   0.5008154511451721,
+   0.46194300055503845
+  ]
+ },
+ "latent_power_mean": {
+  "ar": 0.910248339176178,
+  "os": 0.5003880361715952
+ },
+ "radius_median": {
+  "ar": 0.9632399082183838,
+  "os": 0.6541833877563477
+ },
+ "radius_late_median": {
+  "ar": 0.9531490802764893,
+  "os": 0.35985052585601807
+ },
+ "band_ratio_median": {
+  "ar": 0.9154953956604004,
+  "os": 0.009528273716568947
+ },
+ "truth_shedding_freq_median_hz": 6.188124713336794,
+ "winding": {
+  "frac_neighbours_over_quarter_turn_umax_ge_split": 0.8504672897196262,
+  "frac_neighbours_over_quarter_turn_umax_lt_split": 0.11377245508982035,
+  "n_pairs_ge_split": 428,
+  "n_pairs_lt_split": 334,
+  "wraps_across_ladder_at_t_star_median": 35.43251523730679,
+  "wraps_across_ladder_at_t_star_min": 33.82854175143426,
+  "wraps_across_ladder_at_t_star_max": 35.559370091884766,
+  "wraps_per_tau": {
+   "0": 35.48661866588806,
+   "1": 34.634372592093875,
+   "2": 35.559370091884766,
+   "3": 34.666413925411554,
+   "4": 35.33755488376015,
+   "5": 35.505118704712814,
+   "6": 33.82854175143426,
+   "7": 35.49372376659437,
+   "8": 35.507742439362914,
+   "9": 34.6577612126728,
+   "10": 33.83498250553316,
+   "11": 35.41902434234572,
+   "12": 35.53280999638279,
+   "13": 35.50932214683298,
+   "14": 35.44600613226786,
+   "15": 34.65893738316721,
+   "16": 35.459198357229866,
+   "17": 35.49976933095282,
+   "18": 35.20273271953558,
+   "19": 33.8902172704216
+  }
+ },
+ "exhibit": {
+  "case_id": "Umax_27_tau_11",
+  "test_index": 64,
+  "tau_index": 11,
+  "seed_index": 0,
+  "rule": "median truth amplitude among the test cases"
+ },
+ "radius_split": {
+  "steady": {
+   "truth_in": 0.8159940080897135,
+   "truth_out": 0.5780603595000464,
+   "per_seed": {
+    "ar_in": [
+     0.7782108232650669,
+     0.7868509120979867,
+     0.7803197819960899
+    ],
+    "ar_out": [
+     0.5930925665591826,
+     0.593883746211723,
+     0.579320001915578
+    ],
+    "os_in": [
+     0.4373218278063069,
+     0.4007247928202011,
+     0.40917913404167927
+    ],
+    "os_out": [
+     0.47574073040730547,
+     0.4510755400811566,
+     0.4482601993148801
+    ]
+   },
+   "ar_in": 0.7818762165393212,
+   "ar_out": 0.5905206944216683,
+   "os_in": 0.40917913404167927,
+   "os_out": 0.4559380633855278
+  },
+  "late": {
+   "truth_in": 0.9074198888701189,
+   "truth_out": 0.4202230875932085,
+   "per_seed": {
+    "ar_in": [
+     0.8158305058531761,
+     0.8352384675928679,
+     0.8032932650136683
+    ],
+    "ar_out": [
+     0.5633945013546764,
+     0.5732986225818266,
+     0.4944954685516374
+    ],
+    "os_in": [
+     0.2850416709864893,
+     0.25682969384405957,
+     0.24697862339688603
+    ],
+    "os_out": [
+     0.3515917676013013,
+     0.3460130216602072,
+     0.32348805093275723
+    ]
+   },
+   "ar_in": 0.8203396463877171,
+   "ar_out": 0.5565890682211632,
+   "os_in": 0.25045842408472174,
+   "os_out": 0.34323226084742403
+  },
+  "definition": "RMS over the window (steady t >= 2 s, late t >= 2.5 s) of the latent's projection onto (in) and residual from (out) the case's own leading 2D SVD plane of the centred truth over t >= 2 s, centred on the truth's t >= 2 s mean, over the truth's own RMS excursion in the window; medians over cases (truth) or cases x seeds (AR, one-shot)"
+ }
+}

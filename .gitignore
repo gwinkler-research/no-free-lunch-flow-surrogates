@@ -1,0 +1,17 @@
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated output
+build/
+
+# External inputs and run outputs (not part of the package, see README.md)
+*.h5
+results/refined_4x_2026-05-07
+results/benchmark/cache/
+results/benchmark/truth/
+results/benchmark/runs/
+results/benchmark/encoders/
+results/benchmark/encoders_clean/*.pt
+data/cmp/*.npz

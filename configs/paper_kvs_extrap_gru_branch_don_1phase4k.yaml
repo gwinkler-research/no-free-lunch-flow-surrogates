@@ -1,0 +1,43 @@
+# KVS extrap, GRU-branch DeepONet row (latent x AR), seeds 1-3.
+# Encoder: extrap ConvAE from paper_kvs_extrap_convae_83x442.yaml.
+# Hyperparameters as in the interp row. Only split and encoder differ.
+# 4000 epochs, one optimiser step per epoch on batch_size random training cases. Rollout
+# curriculum from 1 to 100 steps (300 epochs at one step, then a 600-epoch ramp), variance
+# penalty 0.3 once the rollout reaches five steps. best.pt: validation rollout MSE, checked
+# every val_every epochs from epoch 700 on.
+chunk_roots:
+- results/refined_4x_2026-05-07/chunk_01
+- results/refined_4x_2026-05-07/chunk_02
+- results/refined_4x_2026-05-07/chunk_03
+- results/refined_4x_2026-05-07/chunk_04_20260509_220406
+dataset: kvs
+grid_hw:
+- 83
+- 442
+mesh_npz: meshes/refined_4x/mesh.npz
+raster_cache: results/benchmark/cache/kvs_grid_83x442.npz
+split: extrap
+adapter: latent_dynamics
+model_name: gru_1phase4k_dsspan_x
+dynamics: gru_branch_don
+encoder_ref: results/benchmark/encoders/kvs_extrap_convae_83x442_bc32.pt
+require_h5: false
+model:
+  branch_hidden: 128
+  branch_layers: 2
+  trunk_width: 512
+  trunk_depth: 5
+  basis_dim: 128
+  epochs: 4000
+  batch_size: 64
+  lr: 0.0005
+  weight_decay: 0.0001
+  rollout_max_phase1: 100
+  rollout_warmup_phase1: 300
+  rollout_ramp_phase1: 600
+  var_lambda_phase1: 0.3
+  grad_clip_phase1: 0.5
+  best_mature_epoch_phase1: 700
+  val_every: 25
+  device: auto
+  ds_fd: span

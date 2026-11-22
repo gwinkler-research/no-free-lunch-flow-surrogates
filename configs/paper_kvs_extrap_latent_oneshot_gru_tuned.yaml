@@ -1,0 +1,35 @@
+# KVS extrap, GRU-branch one-shot row (latent x one-shot), seeds 1-3.
+# Encoder: extrap ConvAE from paper_kvs_extrap_convae_83x442.yaml.
+# Hyperparameters as in the interp row. Only split and encoder differ.
+# A branch over (theta, ramp) and a trunk over t give the latent trajectory z(t) in one pass,
+# without autoregressive feedback. Hyperparameters from a search on the validation latent MSE.
+dataset: kvs
+split: extrap
+adapter: latent_oneshot
+model_name: latent_oneshot_gru_tuned
+branch_type: gru
+encoder_ref: results/benchmark/encoders/kvs_extrap_convae_83x442_bc32.pt
+chunk_roots:
+- results/refined_4x_2026-05-07/chunk_01
+- results/refined_4x_2026-05-07/chunk_02
+- results/refined_4x_2026-05-07/chunk_03
+- results/refined_4x_2026-05-07/chunk_04_20260509_220406
+mesh_npz: meshes/refined_4x/mesh.npz
+grid_hw:
+- 83
+- 442
+raster_cache: results/benchmark/cache/kvs_grid_83x442.npz
+model:
+  basis_dim: 128
+  branch_hidden: 128
+  branch_layers: 3
+  trunk_width: 256
+  trunk_depth: 3
+  epochs: 2000
+  batch_size: 32
+  lr: 0.00195965565825749
+  weight_decay: 2.0885890255039576e-05
+  spectral_loss_lambda: 0.0
+  val_every: 25
+  early_stop_patience: 300
+  device: auto

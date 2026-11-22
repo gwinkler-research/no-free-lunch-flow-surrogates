@@ -1,0 +1,28 @@
+# CMP film interp, field DeepONet row (S-DeepONet, direct x one-shot), seeds 1-3.
+# A GRU branch over the control sequence and theta and an MLP trunk over the query point
+# (x, y, z/gap plus wafer-relative polar coordinates) give the 3D velocity directly, with no
+# encoder. Loss: field MSE on sampled nodes only. best.pt: validation MSE every epoch on
+# fixed nodes and the first t_window steps.
+dataset: cmp3d
+split: interp
+adapter: cmp3d_sdeeponet
+model_name: cmp3d_sdeeponet_nowss_fix
+cmp3d_npz: data/cmp/cmp3d_full100fix_fem_training.npz
+model:
+  latent_dim: 128
+  branch_hidden: 128
+  branch_layers: 2
+  trunk_hidden: 256
+  trunk_layers: 4
+  lr: 1.0e-3
+  weight_decay: 1.0e-5
+  wss_lambda: 0.0        # no wall-shear-stress loss term, so wss_scale is unused
+  wss_scale: 50.0
+  wss_pts: 2048          # still drawn every step, so it shifts the random stream
+  n_epochs: 4000
+  batch_size: 4          # cases per optimiser step
+  t_window: 32
+  pts_per_sample: 3072   # nodes per case and step
+  wafer_frac: 0.5        # share of those nodes drawn under the wafer
+  val_pts: 6144          # size of the fixed validation node subset
+  device: auto

@@ -1,0 +1,850 @@
+[
+  {
+    "model": "sdeeponet",
+    "label": "S-DeepONet (field)",
+    "cell": "direct\u00d7one-shot",
+    "role": "direct operator",
+    "split": "interp",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.6233932971954346,
+      "std": 0.005794751396637603,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.2345909426609675,
+      "std": 0.003734748969568125,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 1.0274828672409058,
+      "std": 0.011984532482823034,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.027423722328654657,
+      "std": 0.0007880036738452746,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.9992878201133487,
+      "std": 3.143419833059886e-05,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.003777774175008138,
+      "std": 0.0008314786263225315,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 1.5763253415844618,
+      "std": 0.09519469489767081,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.007905822738798128,
+      "std": 0.00250516952592119,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": 0.001168522894405582,
+      "std": 0.0021448869131302437,
+      "n": 3
+    }
+  },
+  {
+    "model": "sdeeponet",
+    "label": "S-DeepONet (field)",
+    "cell": "direct\u00d7one-shot",
+    "role": "direct operator",
+    "split": "extrap",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.8647844990094503,
+      "std": 0.005835351266945276,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.30571221311887103,
+      "std": 0.01356782300055858,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 1.433939019838969,
+      "std": 0.01377332090196648,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.03238766279496624,
+      "std": 0.0059311529383909815,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.9990300759250262,
+      "std": 0.00014550543807557116,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.002888886133829753,
+      "std": 0.0008314786263225314,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 2.1168157808734613,
+      "std": 0.47518181318913666,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.00994766991385,
+      "std": 0.002947202744215625,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": -9.091858185654221e-05,
+      "std": 0.0017188151422539875,
+      "n": 3
+    }
+  },
+  {
+    "model": "mamba_k8",
+    "label": "Mamba-DON k8",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "interp",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.7176535328229269,
+      "std": 0.12954063803167415,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.5377102990945181,
+      "std": 0.24592023802324384,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 0.9465864102045695,
+      "std": 0.013347704359019545,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.14315599098886336,
+      "std": 0.015369394893594956,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.9025898953484582,
+      "std": 0.012209024859868722,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.010222225719028049,
+      "std": 0.004399770261040141,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 5.20160268804272,
+      "std": 0.9697907351917578,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.018118382246595705,
+      "std": 0.012505230962564068,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": 0.046931312744443565,
+      "std": 0.026449056011753208,
+      "n": 3
+    }
+  },
+  {
+    "model": "mamba_k8",
+    "label": "Mamba-DON k8",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "extrap",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.9072428743044535,
+      "std": 0.05409549977175799,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.5547203024228414,
+      "std": 0.11847582673314752,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 1.3544265826543171,
+      "std": 0.008613778164643152,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.12013935813062078,
+      "std": 0.003548583092306704,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.956212121761347,
+      "std": 0.004767656719939291,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.007555548350016276,
+      "std": 0.001911626014050213,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 4.872474930026709,
+      "std": 0.33285532937345347,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.0037035163504899383,
+      "std": 0.0012285022581954813,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": 0.01629249030149629,
+      "std": 0.008901089780552688,
+      "n": 3
+    }
+  },
+  {
+    "model": "s4d_k8",
+    "label": "S4D-DON k8",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "interp",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.6237167914708456,
+      "std": 0.02603124616736282,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.3933047552903493,
+      "std": 0.06271016675729753,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 0.9229954878489176,
+      "std": 0.0028947639205489186,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.12980934587576523,
+      "std": 0.0020662371096714072,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.9289986460649784,
+      "std": 0.0050860479888902655,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.012666673130459256,
+      "std": 0.002177318894883981,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 4.537112280033327,
+      "std": 0.11885299109565574,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.0102311714953329,
+      "std": 0.0026789982475367573,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": 0.04453341581586521,
+      "std": 0.003951213149816225,
+      "n": 3
+    }
+  },
+  {
+    "model": "s4d_k8",
+    "label": "S4D-DON k8",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "extrap",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.8571282426516215,
+      "std": 0.0055535730665320065,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.4157712459564209,
+      "std": 0.01834047508655311,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 1.363073746363322,
+      "std": 0.008545302584719932,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.1232179868273681,
+      "std": 0.0049620701795699985,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.9514683512408578,
+      "std": 0.0050187614884364415,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.012444440523783365,
+      "std": 0.006892476631092937,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 4.944297370758485,
+      "std": 0.5902956664796912,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.004624153608973656,
+      "std": 0.0008699815004097048,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": 0.009888477585164214,
+      "std": 0.0050202297443979384,
+      "n": 3
+    }
+  },
+  {
+    "model": "gru_k8",
+    "label": "GRU-DON k8",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "interp",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.5977833469708761,
+      "std": 0.00288395154582429,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.3322416841983795,
+      "std": 0.01711252307006608,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 0.9223109483718872,
+      "std": 0.0068969905965489174,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.16732719093782214,
+      "std": 0.020617203199432475,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.9139978229168783,
+      "std": 0.007928715537605418,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.00977777640024821,
+      "std": 0.002266236526653444,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 6.956011001181136,
+      "std": 1.0882034880628386,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.0039322274762930145,
+      "std": 0.000962383595273822,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": -0.008911867487789552,
+      "std": 0.007781593912809538,
+      "n": 3
+    }
+  },
+  {
+    "model": "gru_k8",
+    "label": "GRU-DON k8",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "extrap",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.8424187699953715,
+      "std": 0.010395767252101111,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.401725172996521,
+      "std": 0.03952032219134931,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 1.343083103497823,
+      "std": 0.004519443100106468,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.15062215091537964,
+      "std": 0.019836508543245597,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.9217448580193355,
+      "std": 0.025400445651850123,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.012666662534077963,
+      "std": 0.004109605416083777,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 6.534603099717498,
+      "std": 1.5764777307843492,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.005029289789187412,
+      "std": 0.0010480934982417872,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": -0.0034629251104740734,
+      "std": 0.00701666717094929,
+      "n": 3
+    }
+  },
+  {
+    "model": "armlp_k8",
+    "label": "AR-MLP k8",
+    "cell": "latent\u00d7AR",
+    "role": "MLP baseline",
+    "split": "interp",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 1.0279634396235149,
+      "std": 0.08998420291711093,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.99836132923762,
+      "std": 0.11817152015970556,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 1.0803422530492146,
+      "std": 0.07680541180885478,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.4192994714775334,
+      "std": 0.02269780049960969,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.5307716194251484,
+      "std": 0.15108864493289165,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.07622221575842963,
+      "std": 0.019324386357079715,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 20.25561405052844,
+      "std": 1.1483371988318087,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.0778432397171855,
+      "std": 0.003160723853032084,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": -0.02738838543360163,
+      "std": 0.01922554186580203,
+      "n": 3
+    }
+  },
+  {
+    "model": "armlp_k8",
+    "label": "AR-MLP k8",
+    "cell": "latent\u00d7AR",
+    "role": "MLP baseline",
+    "split": "extrap",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 35.98158917824427,
+      "std": 49.32573052422058,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 37.73064136505127,
+      "std": 52.11890229522691,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 32.064492543538414,
+      "std": 43.30509940347545,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 1.7749115653969172,
+      "std": 2.112792065072363,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.7628277130277552,
+      "std": 0.06987140879109634,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.084444440735711,
+      "std": 0.03593134377153271,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 101.97357705063418,
+      "std": 123.56790963071286,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.09975866876128647,
+      "std": 0.035403314459393674,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": -0.011932793813588652,
+      "std": 0.015265220280552242,
+      "n": 3
+    }
+  },
+  {
+    "model": "dmdc_k8",
+    "label": "DMDc k8",
+    "cell": "latent\u00d7AR",
+    "role": "linear baseline",
+    "split": "interp",
+    "expected_n": 1,
+    "nrmse_3d": {
+      "mean": 2.0133883953094482,
+      "std": 0.0,
+      "n": 1
+    },
+    "nrmse_inplane": {
+      "mean": 2.3784546852111816,
+      "std": 0.0,
+      "n": 1
+    },
+    "nrmse_z": {
+      "mean": 0.9203823804855347,
+      "std": 0.0,
+      "n": 1
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.7958139122381475,
+      "std": 0.0,
+      "n": 1
+    },
+    "spatial_corr_inner90": {
+      "mean": -0.10984873477424865,
+      "std": 0.0,
+      "n": 1
+    },
+    "onset_latency_excess": {
+      "mean": 0.30200001001358034,
+      "std": 0.0,
+      "n": 1
+    },
+    "radial_profile_l2": {
+      "mean": 46.50947175949025,
+      "std": 0.0,
+      "n": 1
+    },
+    "steady_drift_excess": {
+      "mean": 0.5745928088823954,
+      "std": 0.0,
+      "n": 1
+    },
+    "wiwnu_excess": {
+      "mean": -0.12055811702282374,
+      "std": 0.0,
+      "n": 1
+    }
+  },
+  {
+    "model": "dmdc_k8",
+    "label": "DMDc k8",
+    "cell": "latent\u00d7AR",
+    "role": "linear baseline",
+    "split": "extrap",
+    "expected_n": 1,
+    "nrmse_3d": {
+      "mean": 2.900588035583496,
+      "std": 0.0,
+      "n": 1
+    },
+    "nrmse_inplane": {
+      "mean": 3.414262056350708,
+      "std": 0.0,
+      "n": 1
+    },
+    "nrmse_z": {
+      "mean": 1.3877537250518799,
+      "std": 0.0,
+      "n": 1
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.848344003011153,
+      "std": 0.0,
+      "n": 1
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.30272108790429697,
+      "std": 0.0,
+      "n": 1
+    },
+    "onset_latency_excess": {
+      "mean": 0.26600000460942586,
+      "std": 0.0,
+      "n": 1
+    },
+    "radial_profile_l2": {
+      "mean": 54.843046851706596,
+      "std": 0.0,
+      "n": 1
+    },
+    "steady_drift_excess": {
+      "mean": 0.5133295714855194,
+      "std": 0.0,
+      "n": 1
+    },
+    "wiwnu_excess": {
+      "mean": -0.07679065035543671,
+      "std": 0.0,
+      "n": 1
+    }
+  },
+  {
+    "model": "oneshot_gru",
+    "label": "GRU-branch one-shot",
+    "cell": "latent\u00d7one-shot",
+    "role": "time-axis control",
+    "split": "interp",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.5863303542137146,
+      "std": 0.008404564736367356,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.3256594240665436,
+      "std": 0.013585222484842296,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 0.905023992061615,
+      "std": 0.008596295829812486,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.09860432268329737,
+      "std": 0.012050790565628902,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.9677678669079454,
+      "std": 0.01110235428304524,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.009777779049343533,
+      "std": 0.0013698650341086702,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 3.3983954930001556,
+      "std": 0.6290614416850339,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.001904874405590817,
+      "std": 0.0003527315755681762,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": 0.01342378144532018,
+      "std": 0.009957021063601896,
+      "n": 3
+    }
+  },
+  {
+    "model": "oneshot_gru",
+    "label": "GRU-branch one-shot",
+    "cell": "latent\u00d7one-shot",
+    "role": "time-axis control",
+    "split": "extrap",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.8248600761095682,
+      "std": 0.002442727620723927,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.37221332391103107,
+      "std": 0.0026179759524275962,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 1.3283102909723918,
+      "std": 0.0030668909373680695,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.09071797537989197,
+      "std": 0.002817071056745951,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.9740301099397035,
+      "std": 0.0016820619126790765,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.007777780956692165,
+      "std": 0.002514158792926362,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 3.242071705437743,
+      "std": 0.22806827188943954,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.0011928372841794044,
+      "std": 0.00012590886924126988,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": 0.0009647134735568454,
+      "std": 0.0012886952868349107,
+      "n": 3
+    }
+  },
+  {
+    "model": "oneshot_s4d",
+    "label": "S4D-branch one-shot",
+    "cell": "latent\u00d7one-shot",
+    "role": "time-axis control",
+    "split": "interp",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.6719151337941488,
+      "std": 0.00413463804406474,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.5062823196252187,
+      "std": 0.008841789569513208,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 0.9174668987592062,
+      "std": 0.0015011067861569677,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.37600027203927344,
+      "std": 0.003921426241125068,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.5304300024702444,
+      "std": 0.019770378043108223,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.02599999904632568,
+      "std": 0.004745363586478226,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 15.965578936167185,
+      "std": 0.2677189938424406,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.028513986120621365,
+      "std": 0.003998729466846305,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": -0.10327007413472507,
+      "std": 0.006504130556073724,
+      "n": 3
+    }
+  },
+  {
+    "model": "oneshot_s4d",
+    "label": "S4D-branch one-shot",
+    "cell": "latent\u00d7one-shot",
+    "role": "time-axis control",
+    "split": "extrap",
+    "expected_n": 3,
+    "nrmse_3d": {
+      "mean": 0.9682362278302511,
+      "std": 0.008857577067983529,
+      "n": 3
+    },
+    "nrmse_inplane": {
+      "mean": 0.6897048751513163,
+      "std": 0.0180870032438844,
+      "n": 3
+    },
+    "nrmse_z": {
+      "mean": 1.364127278327942,
+      "std": 0.0008699325655082361,
+      "n": 3
+    },
+    "cumwss_rel_l2_inner_mean": {
+      "mean": 0.35456052892235684,
+      "std": 0.008194313171046115,
+      "n": 3
+    },
+    "spatial_corr_inner90": {
+      "mean": 0.7483967752588524,
+      "std": 0.008500182064923168,
+      "n": 3
+    },
+    "onset_latency_excess": {
+      "mean": 0.026666680971781414,
+      "std": 0.0019626116541565193,
+      "n": 3
+    },
+    "radial_profile_l2": {
+      "mean": 17.533200028193942,
+      "std": 0.5279167157853762,
+      "n": 3
+    },
+    "steady_drift_excess": {
+      "mean": 0.013674199250009325,
+      "std": 0.009160719491821474,
+      "n": 3
+    },
+    "wiwnu_excess": {
+      "mean": -0.0833318279092174,
+      "std": 0.002015950425701663,
+      "n": 3
+    }
+  }
+]

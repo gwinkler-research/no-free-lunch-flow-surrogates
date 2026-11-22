@@ -1,0 +1,16 @@
+# Python environment used for the checks of this package.
+# torch was installed as the CUDA 13.0 build (2.10.0+cu130); mamba-ssm is needed only for the Mamba branch.
+name: kvs_repro
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+      - numpy==2.3.5
+      - scipy==1.17.1
+      - pyyaml==6.0.3
+      - h5py==3.16.0
+      - dtw-python==1.7.4
+      - torch==2.10.0
+      - mamba-ssm==2.3.1

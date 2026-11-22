@@ -1,0 +1,770 @@
+[
+  {
+    "model": "s4d_1phase4k",
+    "label": "S4D-branch DON",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "interp",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 0.33977646984521886,
+      "std": 0.033456434702526926,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.9034253980756367,
+      "std": 0.00025024724734413876,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.26544220785808176,
+      "std": 0.00626338902080258,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.051516074271772024,
+      "std": 0.003756530080626365,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.0964251165660683,
+      "std": 0.006820665504167178,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 0.3053116376201312,
+      "std": 0.02934570061900947,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.02195237606619867,
+      "std": 0.0053671472475659045,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.020510696448909942,
+      "std": 0.0020678448459967805,
+      "n": 3
+    }
+  },
+  {
+    "model": "s4d_1phase4k",
+    "label": "S4D-branch DON",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "extrap",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 1.2918766281235898,
+      "std": 0.023719112682130887,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.7481237710110508,
+      "std": 0.014289786545635747,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.7755393822885807,
+      "std": 0.023480495141216366,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.014791264019091643,
+      "std": 0.005046842550465702,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.2510333333412806,
+      "std": 0.021562366746067124,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 1.1614672094583511,
+      "std": 0.020934180359905248,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.016890189615885415,
+      "std": 0.0032569484406497345,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.036625200063128256,
+      "std": 0.011291818444557643,
+      "n": 3
+    }
+  },
+  {
+    "model": "mamba_1phase4k",
+    "label": "Mamba-branch DON",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "interp",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 0.326245251716492,
+      "std": 0.028269494775325553,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.906998729873533,
+      "std": 0.002081664482066959,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.26148551668747894,
+      "std": 0.006417156021785525,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.057566243508830994,
+      "std": 0.006621992585797979,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.09285024110821709,
+      "std": 0.01266843107690627,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 0.29301009451349574,
+      "std": 0.02439181850844271,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.01197393592429046,
+      "std": 0.002778794480143388,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.017706064911665265,
+      "std": 0.00046206374078065895,
+      "n": 3
+    }
+  },
+  {
+    "model": "mamba_1phase4k",
+    "label": "Mamba-branch DON",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "extrap",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 1.3282487678779002,
+      "std": 0.03154278229314181,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.6039277069890683,
+      "std": 0.07283351796140182,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.8316854344797845,
+      "std": 0.026736741985755364,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.016603018636776445,
+      "std": 0.0018588931792562382,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.2480713555830807,
+      "std": 0.04465407114672062,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 1.1917863289515178,
+      "std": 0.02159071550744169,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.013817317708333332,
+      "std": 0.005478600544991187,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.030668364925299573,
+      "std": 0.01739849300569989,
+      "n": 3
+    }
+  },
+  {
+    "model": "gru_1phase4k",
+    "label": "GRU-branch DON",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "interp",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 0.43973346767429883,
+      "std": 0.04288075225078859,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.8978599839714422,
+      "std": 0.007144837398128187,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.29046865111372994,
+      "std": 0.00874844494445427,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.04223661275718832,
+      "std": 0.002813081175629879,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.0861352674915019,
+      "std": 0.00397135527127254,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 0.3937988008062045,
+      "std": 0.03786103911220722,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.002580808188028382,
+      "std": 0.0010561224217405028,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.019952706451777533,
+      "std": 0.0004984842817957789,
+      "n": 3
+    }
+  },
+  {
+    "model": "gru_1phase4k",
+    "label": "GRU-branch DON",
+    "cell": "latent\u00d7AR",
+    "role": "recurrent branch DeepONet",
+    "split": "extrap",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 1.3573467036928821,
+      "std": 0.04545016131790889,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.6160189397080835,
+      "std": 0.10279748898594324,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.834527881172258,
+      "std": 0.04860433262972397,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.019122915190337084,
+      "std": 0.00604987170888015,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.2583333327372869,
+      "std": 0.011468604059137077,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 1.215721492966016,
+      "std": 0.04264280601956703,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.008868241373697917,
+      "std": 0.0014452038272291412,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.025996824401948938,
+      "std": 0.00650205603258943,
+      "n": 3
+    }
+  },
+  {
+    "model": "ar_mlp",
+    "label": "AR-MLP",
+    "cell": "latent\u00d7AR",
+    "role": "MLP baseline",
+    "split": "interp",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 0.9423610768843353,
+      "std": 0.019528965998428845,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.8387836595969288,
+      "std": 0.09365670631800549,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.43787995442994027,
+      "std": 0.01830513371580538,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.16518108149226812,
+      "std": 0.022548625320678927,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.38771571936413235,
+      "std": 0.028464945424105617,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 0.8500211462378502,
+      "std": 0.014612705030002067,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.012557603034420288,
+      "std": 0.008350732420701064,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.018168825211824047,
+      "std": 0.0017085459569265125,
+      "n": 3
+    }
+  },
+  {
+    "model": "ar_mlp",
+    "label": "AR-MLP",
+    "cell": "latent\u00d7AR",
+    "role": "MLP baseline",
+    "split": "extrap",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 1.3877744255203428,
+      "std": 0.030991406373375312,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.6760605180481528,
+      "std": 0.03139970781182223,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.8441578527388307,
+      "std": 0.04695592862278173,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.04201978214978896,
+      "std": 0.03154515518321629,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.35536666591962174,
+      "std": 0.17111038084422664,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 1.2433113505442936,
+      "std": 0.027774362662803465,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.016436039225260417,
+      "std": 0.002027426153291518,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.014943884393074291,
+      "std": 0.004245633214150016,
+      "n": 3
+    }
+  },
+  {
+    "model": "dmdc",
+    "label": "DMDc",
+    "cell": "latent\u00d7AR",
+    "role": "linear baseline",
+    "split": "interp",
+    "expected_n": 1,
+    "rollout_rmse": {
+      "mean": 1.3785867702864965,
+      "std": 0.0,
+      "n": 1
+    },
+    "power_ratio": {
+      "mean": 0.00044312285341233045,
+      "std": 0.0,
+      "n": 1
+    },
+    "rmse_warped": {
+      "mean": 0.7659302982745589,
+      "std": 0.0,
+      "n": 1
+    },
+    "fft_freq_err": {
+      "mean": 0.8904783814567898,
+      "std": 0.0,
+      "n": 1
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.485000004991889,
+      "std": 0.0,
+      "n": 1
+    },
+    "strip_k_rmse": {
+      "mean": 1.3114813417196274,
+      "std": 0.0,
+      "n": 1
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.041947499150815214,
+      "std": 0.0,
+      "n": 1
+    },
+    "alpha_rms": {
+      "mean": 0.024225645918914816,
+      "std": 0.0,
+      "n": 1
+    }
+  },
+  {
+    "model": "dmdc",
+    "label": "DMDc",
+    "cell": "latent\u00d7AR",
+    "role": "linear baseline",
+    "split": "extrap",
+    "expected_n": 1,
+    "rollout_rmse": {
+      "mean": 2.1214578707867804,
+      "std": 0.0,
+      "n": 1
+    },
+    "power_ratio": {
+      "mean": 0.00012930009359953508,
+      "std": 0.0,
+      "n": 1
+    },
+    "rmse_warped": {
+      "mean": 1.453825791108541,
+      "std": 0.0,
+      "n": 1
+    },
+    "fft_freq_err": {
+      "mean": 0.9592011780261672,
+      "std": 0.0,
+      "n": 1
+    },
+    "onset_latency_oscmed10": {
+      "mean": null,
+      "std": null,
+      "n": 0
+    },
+    "strip_k_rmse": {
+      "mean": 2.0119795203208923,
+      "std": 0.0,
+      "n": 1
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.0032740722656250006,
+      "std": 0.0,
+      "n": 1
+    },
+    "alpha_rms": {
+      "mean": 0.004313657364812852,
+      "std": 0.0,
+      "n": 1
+    }
+  },
+  {
+    "model": "field_deeponet",
+    "label": "field DeepONet",
+    "cell": "direct\u00d7one-shot",
+    "role": "direct operator",
+    "split": "interp",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 0.6638604965178828,
+      "std": 0.002909920522137288,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.004189810666166138,
+      "std": 0.001897591029865043,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.7171353615903865,
+      "std": 0.0019591778135618194,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.5646664096574355,
+      "std": 0.03155914999689319,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.11617734753195225,
+      "std": 0.023733042291673327,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 0.5980928614735603,
+      "std": 0.0024431366366942267,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.002575577445652174,
+      "std": 0.0009239306130463645,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.00908780352631521,
+      "std": 0.00201143496479942,
+      "n": 3
+    }
+  },
+  {
+    "model": "field_deeponet",
+    "label": "field DeepONet",
+    "cell": "direct\u00d7one-shot",
+    "role": "direct operator",
+    "split": "extrap",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 1.0972500970237362,
+      "std": 0.004601047041370975,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.0018713016000680485,
+      "std": 0.00044524108066914766,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 1.3792861228673061,
+      "std": 0.001155138148721149,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.3106779280205725,
+      "std": 0.10476579593782472,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.06627202270168756,
+      "std": 0.0037143073874029006,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 0.9803036004304886,
+      "std": 0.0043527993123366766,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.007855086263020833,
+      "std": 0.002485201830484096,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.0016624567388564074,
+      "std": 0.0001476527447217878,
+      "n": 3
+    }
+  },
+  {
+    "model": "oneshot_gru",
+    "label": "GRU-branch one-shot",
+    "cell": "latent\u00d7one-shot",
+    "role": "time-axis control",
+    "split": "interp",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 0.6988061547178342,
+      "std": 0.005220609904072601,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.0317522726600258,
+      "std": 0.020573631998654595,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.7175443642714502,
+      "std": 0.011891739636736382,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.6008369796672238,
+      "std": 0.05563469174470139,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.1538436557089919,
+      "std": 0.015065942527878663,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 0.6261572365959486,
+      "std": 0.004765265542649012,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.0106514957446407,
+      "std": 0.0009464594702804989,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.012207849068332282,
+      "std": 0.0010019761913241533,
+      "n": 3
+    }
+  },
+  {
+    "model": "oneshot_gru",
+    "label": "GRU-branch one-shot",
+    "cell": "latent\u00d7one-shot",
+    "role": "time-axis control",
+    "split": "extrap",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 1.2240487396270439,
+      "std": 0.011242080259959835,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.17064288947686623,
+      "std": 0.006296059391575046,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 1.4138547452535015,
+      "std": 0.016043467500346457,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.7169478001659529,
+      "std": 0.013823130676698546,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.30123299588559055,
+      "std": 0.09877366353156052,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 1.0994220525026321,
+      "std": 0.010949441099038821,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.026682271321614586,
+      "std": 0.010925563506639402,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.010761015448391231,
+      "std": 0.004303418789778756,
+      "n": 3
+    }
+  },
+  {
+    "model": "oneshot_s4d",
+    "label": "S4D-branch one-shot",
+    "cell": "latent\u00d7one-shot",
+    "role": "time-axis control",
+    "split": "interp",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 0.7165481100356347,
+      "std": 0.0009023502103607481,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.00022866718659726108,
+      "std": 3.312193368327809e-05,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 0.7401120126833648,
+      "std": 0.00041469496421779714,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.889284084364585,
+      "std": 0.0014520698624098177,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": 0.36348888905275434,
+      "std": 0.04438606298251531,
+      "n": 3
+    },
+    "strip_k_rmse": {
+      "mean": 0.6465251644452413,
+      "std": 0.0009677728580754414,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.016448149013058574,
+      "std": 0.0021623809371541973,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.016525841184757327,
+      "std": 0.001481299294729424,
+      "n": 3
+    }
+  },
+  {
+    "model": "oneshot_s4d",
+    "label": "S4D-branch one-shot",
+    "cell": "latent\u00d7one-shot",
+    "role": "time-axis control",
+    "split": "extrap",
+    "expected_n": 3,
+    "rollout_rmse": {
+      "mean": 1.1417936810687856,
+      "std": 0.0010622440615214912,
+      "n": 3
+    },
+    "power_ratio": {
+      "mean": 0.0004390582161096198,
+      "std": 2.6548117421866125e-05,
+      "n": 3
+    },
+    "rmse_warped": {
+      "mean": 1.413931123095703,
+      "std": 0.0005117490770430648,
+      "n": 3
+    },
+    "fft_freq_err": {
+      "mean": 0.9652099274486514,
+      "std": 0.002790713051318079,
+      "n": 3
+    },
+    "onset_latency_oscmed10": {
+      "mean": null,
+      "std": null,
+      "n": 0
+    },
+    "strip_k_rmse": {
+      "mean": 1.0312958260377247,
+      "std": 0.0010207223793586371,
+      "n": 3
+    },
+    "halluc_pixel_frac_pre": {
+      "mean": 0.023718172200520832,
+      "std": 0.0029441902957207497,
+      "n": 3
+    },
+    "alpha_rms": {
+      "mean": 0.0044683655491595,
+      "std": 0.0010237533829724043,
+      "n": 3
+    }
+  }
+]

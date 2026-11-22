@@ -1,0 +1,21 @@
+# KVS extrap, DMDc row (linear latent baseline), one seed (deterministic).
+# Encoder: extrap ConvAE from paper_kvs_extrap_convae_83x442.yaml.
+# Linear DMDc: least-squares A and B, with the spectral radius of A capped at 1 (adapter
+# defaults), on the encoder latent with controls s(t) and ds/dt. Same encoder and controls as
+# the latent AR rows, so only the dynamics differ (linear vs nonlinear). No training loop.
+dataset: kvs
+split: extrap
+adapter: dmdc
+model_name: kvs_dmdc
+encoder_ref: results/benchmark/encoders/kvs_extrap_convae_83x442_bc32.pt
+chunk_roots:
+  - results/refined_4x_2026-05-07/chunk_01
+  - results/refined_4x_2026-05-07/chunk_02
+  - results/refined_4x_2026-05-07/chunk_03
+  - results/refined_4x_2026-05-07/chunk_04_20260509_220406
+mesh_npz: meshes/refined_4x/mesh.npz
+grid_hw: [83, 442]
+raster_cache: results/benchmark/cache/kvs_grid_83x442.npz
+model:
+  rcond: 1.0e-10         # cutoff of the SVD least-squares solve
+  device: auto

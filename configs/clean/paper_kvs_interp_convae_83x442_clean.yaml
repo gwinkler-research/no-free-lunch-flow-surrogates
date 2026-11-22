@@ -1,0 +1,38 @@
+# KVS interp, frozen convolutional autoencoder on the 83x442 raster, one seed.
+# Encoder used by all KVS interp latent rows. Same hyperparameters as
+# paper_kvs_extrap_convae_83x442.yaml. Writes to results/benchmark/encoders_clean/. The latent
+# configs load it under the content-addressed name kvs_interp_convae_83x442_bc32_47132e7b07.pt.
+dataset: kvs
+split: interp
+adapter: grid_convae
+model_name: convae_83x442
+chunk_roots:
+  - results/refined_4x_2026-05-07/chunk_01
+  - results/refined_4x_2026-05-07/chunk_02
+  - results/refined_4x_2026-05-07/chunk_03
+  - results/refined_4x_2026-05-07/chunk_04_20260509_220406
+mesh_npz: meshes/refined_4x/mesh.npz
+grid_hw: [83, 442]
+raster_cache: results/benchmark/cache/kvs_grid_83x442.npz
+encoder_out_dir: results/benchmark/encoders_clean
+model:
+  latent_dim: 32
+  base_channels: 32
+  n_downsample: 3
+  epochs: 500
+  batch_size: 8
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  lambda_recon: 1.0
+  lambda_temporal: 0.1
+  val_every: 25
+  early_stop_patience: 100
+  device: auto
+  gpu_preload: true
+  subsample:
+    case_ratio: 1.0       # all training cases every epoch
+    subseq_len: 32        # random window of 32 consecutive frames per batch
+  lr_schedule:
+    kind: cosine
+    eta_min: 1.0e-5       # ~lr/100
+require_h5: false   # fields come from the raster cache, no fields.h5 needed

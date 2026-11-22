@@ -1,0 +1,218 @@
+{
+  "task": "Solver strong scaling and per-case solver wall-clock time t_FEM of both regimes",
+  "method": "min-of-samples on shared machine (no wait-for-quiet)",
+  "hardware": {
+    "cpu": "2x AMD EPYC 9534 64-Core",
+    "physical_cores": 128,
+    "logical_threads": 256,
+    "smt": true,
+    "sockets": 2,
+    "numa_nodes": 16,
+    "cores_per_numa": 8,
+    "dolfinx": "0.9.0",
+    "petsc_cmp": "3.23.5",
+    "petsc_kvs": "3.23.4",
+    "mpi": "MPICH Hydra 4.3.1",
+    "measurement_note": "shared production machine; min-of-samples used to recover intrinsic timing, spread reported",
+    "ram_gb": 1512
+  },
+  "KVS": {
+    "regime": "2D CFD (Karman vortex street), IPCS",
+    "mesh": "cylchan_refined_4x.msh (Taylor-Hood P2/P1: 237351 P2 / 59691 P1 nodes, 117969 quad-tri cells)",
+    "mesh_provenance": {
+      "name": "refined_4x",
+      "file": "meshes/refined_4x/cylchan_refined_4x.msh",
+      "generated_by": "data_prep/extract_mesh_refined_4x.py (2026-05-06)",
+      "geometry": "Schaefer-Turek 2D: L=2.2 x H=0.41, cyl (0.2,0.2) r=0.05; order 2, res_min=0.005, lc_far=0.01",
+      "p2_nodes": 237351,
+      "p1_nodes": 59691,
+      "cells": 117969,
+      "mesh_hash": "521f35c8bee996ef256cf511c37cfb8d",
+      "md5_msh": "06b3a3ec365efb0fdfb9b61991115ec3",
+      "md5_npz": "eeb729766385947d8dc63967c435f203",
+      "data_source": "results/refined_4x_2026-05-07/chunk_01..04",
+      "surrogate_data_nodes": 36291
+    },
+    "full_run": {
+      "T_end": 4.0,
+      "dt_sim": 0.0005,
+      "steps": 8000,
+      "ramp_T": 1.0,
+      "U_max": 1.0,
+      "save_every": 40,
+      "snapshots": 201,
+      "note": "solver dt=0.0005 (8000 steps); training uses 201 saved snapshots at dt_save=0.02s (every 40th step)"
+    },
+    "core_counts": [
+      2,
+      4
+    ],
+    "wallclock_s_min": [
+      4652.52,
+      2764.05
+    ],
+    "wallclock_s_median": [
+      4665.24,
+      2780.85
+    ],
+    "wallclock_s_max": [
+      4677.95,
+      2797.64
+    ],
+    "reps_per_point": [
+      2,
+      2
+    ],
+    "parallel_efficiency": [
+      1.0,
+      0.842
+    ],
+    "operating_point_cores": 4,
+    "t_fem_per_case_s": 2774.31,
+    "t_fem_per_case_h": 0.771,
+    "diverged_core_counts": [
+      8,
+      16,
+      32
+    ],
+    "n_train": 644,
+    "datagen_total_h": 496.3
+  },
+  "CMP": {
+    "regime": "3D unsteady Stokes (CMP slurry gap), Taylor-Hood P2/P1, hypre AMG",
+    "mesh": "hex_gap004.xdmf (217812 hex)",
+    "full_run": {
+      "dt": 0.01,
+      "t_end": 2.0,
+      "steps": 200,
+      "ramp_time": 1.0
+    },
+    "scaling_method": "full 200-step runs (--skip_outputs, compute-only); per-step distribution per core",
+    "core_counts": [
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "step_sec_min": [
+      319.06,
+      163.771,
+      104.93,
+      62.666,
+      48.343
+    ],
+    "step_sec_median": [
+      322.375,
+      164.707,
+      106.58,
+      71.85,
+      52.03
+    ],
+    "step_sec_max": [
+      342.004,
+      167.778,
+      158.917,
+      275.349,
+      71.769
+    ],
+    "reps_per_point": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "per_step_distribution": [
+      {
+        "n_steps": 200,
+        "mean": 322.83,
+        "std": 2.85,
+        "min": 319.06,
+        "p10": 320.53,
+        "median": 322.37,
+        "p90": 324.84,
+        "max": 342.0
+      },
+      {
+        "n_steps": 200,
+        "mean": 164.71,
+        "std": 0.48,
+        "min": 163.77,
+        "p10": 164.08,
+        "median": 164.71,
+        "p90": 165.28,
+        "max": 167.78
+      },
+      {
+        "n_steps": 200,
+        "mean": 107.86,
+        "std": 6.79,
+        "min": 104.93,
+        "p10": 105.56,
+        "median": 106.58,
+        "p90": 108.68,
+        "max": 158.92
+      },
+      {
+        "n_steps": 200,
+        "mean": 94.36,
+        "std": 45.33,
+        "min": 62.67,
+        "p10": 63.3,
+        "median": 71.85,
+        "p90": 160.03,
+        "max": 275.35
+      },
+      {
+        "n_steps": 200,
+        "mean": 54.25,
+        "std": 5.6,
+        "min": 48.34,
+        "p10": 50.03,
+        "median": 52.03,
+        "p90": 63.87,
+        "max": 71.77
+      }
+    ],
+    "parallel_efficiency": [
+      1.0,
+      0.974,
+      0.76,
+      0.636,
+      0.412
+    ],
+    "t_fem_per_case_s_by_core": [
+      64894.6,
+      33147.3,
+      21729.2,
+      19056.2,
+      11023.4
+    ],
+    "t_fem_per_case_h_by_core": [
+      18.026,
+      9.208,
+      6.036,
+      5.293,
+      3.062
+    ],
+    "t_fem_per_case_source": [
+      "measured_full_200step",
+      "measured_full_200step",
+      "measured_full_200step",
+      "measured_full_200step",
+      "measured_full_200step"
+    ],
+    "operating_point_cores": 16,
+    "t_fem_per_case_s": 40545.26,
+    "t_fem_per_case_h": 11.263,
+    "t_fem_anchor_provenance": "measured full run ds_088 @16 cores (as-run, INCL. I/O, shared machine); compute-only full run @16c = 9.21h -> difference is field-output I/O + concurrent load",
+    "n_train": 100,
+    "datagen_total_h": 1126.3
+  },
+  "caveats": [
+    "Measured on a shared production machine under load from other users. Where a point was run more than once, the reported time is the minimum over the runs, the best estimate of the time without contention. Median and maximum show the spread.",
+    "The wake solver diverges above 4 MPI ranks with its solver configuration, which is tuned for 4 ranks. 4 ranks is therefore the operating point.",
+    "The solver times are CPU wall-clock times on the machine described under hardware. Surrogate training and inference ran on a separate GPU (reports/inference_timing.json)."
+  ]
+}

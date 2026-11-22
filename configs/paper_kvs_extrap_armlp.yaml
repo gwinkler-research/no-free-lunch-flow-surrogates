@@ -1,0 +1,35 @@
+# KVS extrap, AR-MLP row (latent x AR baseline), seeds 0-2.
+# Encoder: extrap ConvAE from paper_kvs_extrap_convae_83x442.yaml.
+# Hyperparameters as in the interp row. Only split and encoder differ.
+# Rollout curriculum from 1 to 50 steps (150 epochs at one step, then a 300-epoch ramp),
+# variance penalty lambda_var 0.3, control inputs s(t) and ds/dt. Latents use the
+# normalisation stored in the encoder file.
+dataset: kvs
+split: extrap
+adapter: latent_dynamics
+model_name: ar_mlp
+dynamics: ar_mlp
+encoder_ref: results/benchmark/encoders/kvs_extrap_convae_83x442_bc32.pt
+chunk_roots:
+  - results/refined_4x_2026-05-07/chunk_01
+  - results/refined_4x_2026-05-07/chunk_02
+  - results/refined_4x_2026-05-07/chunk_03
+  - results/refined_4x_2026-05-07/chunk_04_20260509_220406
+mesh_npz: meshes/refined_4x/mesh.npz
+grid_hw: [83, 442]
+raster_cache: results/benchmark/cache/kvs_grid_83x442.npz
+model:
+  mlp_hidden: [128, 128]
+  activation: silu
+  dropout: 0.0
+  epochs: 600
+  batch_size: 64
+  lr: 1.0e-3
+  weight_decay: 1.0e-6
+  rollout_warmup_epochs: 150
+  rollout_ramp_epochs: 300
+  rollout_max: 50
+  lambda_var: 0.3
+  val_every: 25
+  early_stop_patience: 150
+  device: auto

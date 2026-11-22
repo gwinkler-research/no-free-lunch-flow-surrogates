@@ -1,0 +1,53 @@
+{
+ "meta": {
+  "split": "interp",
+  "steady_t": 2.0,
+  "truth": "results/benchmark/truth/kvs_interp.npz",
+  "runs_root": "results/benchmark/runs",
+  "date": "2026-09-21"
+ },
+ "seeds": {
+  "0": {
+   "best.pt": {
+    "epoch": 2795,
+    "P": 0.006455146707594395,
+    "probe_rmse_steady": 1.6786514520645142,
+    "probe_rmse_full": 1.3543314933776855
+   },
+   "last.pt": {
+    "epoch": 4000,
+    "P": 0.0095197269693017,
+    "probe_rmse_steady": 1.679045557975769,
+    "probe_rmse_full": 1.3334951400756836
+   }
+  },
+  "1": {
+   "best.pt": {
+    "epoch": 2548,
+    "P": 0.0017724878853186965,
+    "probe_rmse_steady": 1.674923062324524,
+    "probe_rmse_full": 1.3462855815887451
+   },
+   "last.pt": {
+    "epoch": 4000,
+    "P": 0.0022377693094313145,
+    "probe_rmse_steady": 1.6764097213745117,
+    "probe_rmse_full": 1.3238945007324219
+   }
+  },
+  "2": {
+   "best.pt": {
+    "epoch": 2954,
+    "P": 0.0044608148746192455,
+    "probe_rmse_steady": 1.6798890829086304,
+    "probe_rmse_full": 1.337029218673706
+   },
+   "last.pt": {
+    "epoch": 4000,
+    "P": 0.005001297686249018,
+    "probe_rmse_steady": 1.6775776147842407,
+    "probe_rmse_full": 1.3290278911590576
+   }
+  }
+ }
+}

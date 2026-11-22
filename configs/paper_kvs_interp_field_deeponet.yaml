@@ -1,0 +1,38 @@
+# KVS interp, field DeepONet row (direct x one-shot), seeds 0-2.
+# A GRU branch over (s(t), theta) and an MLP trunk over normalised (x, y, t) give (u, v, p)
+# on the mesh directly: no encoder, no autoregression, no raster cache. Coordinates and theta
+# are normalised with train statistics. best.pt: validation MSE every epoch on fixed nodes
+# and the first t_window steps. Scored on the fixed KVS evaluation nodes (8192 P2 / 4096 P1)
+# like every KVS row. grid_hw is required by the config loader but not used by this model.
+dataset: kvs
+split: interp
+adapter: kvs_field_deeponet
+model_name: kvs_field_deeponet_norm
+chunk_roots:
+  - results/refined_4x_2026-05-07/chunk_01
+  - results/refined_4x_2026-05-07/chunk_02
+  - results/refined_4x_2026-05-07/chunk_03
+  - results/refined_4x_2026-05-07/chunk_04_20260509_220406
+mesh_npz: meshes/refined_4x/mesh.npz
+# Prebuilt float16 cache of the train and val fields on a fixed training node pool.
+# Training reads it once into host RAM.
+kvs_field_cache: data/kvs/field_cache_pool24000_8000
+grid_hw: [83, 442]
+model:
+  # Network size, lr and weight decay as in the CMP S-DeepONet configs.
+  latent_dim: 128
+  branch_hidden: 128
+  branch_layers: 2
+  trunk_hidden: 256
+  trunk_layers: 4
+  epochs: 4000
+  case_batch: 32          # cases per optimiser step, run in one batched forward pass
+  t_window: 32            # random window of 32 time steps per step
+  pts_per_sample: 2048    # nodes per step, half P2 (u, v) and half P1 (p)
+  lr: 1.0e-3
+  weight_decay: 1.0e-5
+  # Training node pool, drawn once per seed. Used only when kvs_field_cache is not set.
+  train_node_pool_p2: 24000
+  train_node_pool_p1: 8000
+  normalize_channels: true   # z-score u, v and p with train statistics
+  device: auto

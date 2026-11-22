@@ -1,0 +1,28 @@
+{
+  "metrics": {
+    "fft_freq_err_mean": 0.03970795250374258,
+    "fft_freq_err_median": 0.003865832817999803,
+    "power_ratio": 0.8944579599808752,
+    "var_ratio_unweighted": 27.468309575657226,
+    "rollout_rmse": 0.39091154234634434,
+    "rollout_rmse_p": 1.5083485905501244,
+    "rmse_warped": 0.30221978796366783
+  },
+  "meta": {
+    "dataset": "kvs",
+    "split": "interp",
+    "model": "gru_1phase4k_clean",
+    "seed": 3,
+    "target_type": "field",
+    "created_utc": "2026-09-07T22:50:11.902159+00:00",
+    "train_wallclock_s": 938.2589480876923,
+    "infer_latency_ms": 375.8137986279916,
+    "config_hash": "594269066a4a96eb",
+    "n_params": 3591840,
+    "encoder_ref": "results/benchmark/encoders_clean/kvs_interp_convae_83x442_bc32_47132e7b07.pt",
+    "dynamics": "gru_branch_don",
+    "best_epoch": 3675,
+    "control_source": "theta_reconstruct",
+    "theta_free": false
+  }
+}

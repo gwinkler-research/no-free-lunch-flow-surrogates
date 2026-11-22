@@ -1,0 +1,28 @@
+{
+  "metrics": {
+    "fft_freq_err_mean": 0.05417752229974702,
+    "fft_freq_err_median": 0.0015248885780712214,
+    "power_ratio": 0.908874746445801,
+    "var_ratio_unweighted": 8.28067961386276,
+    "rollout_rmse": 0.31072154277688385,
+    "rollout_rmse_p": 1.4173895082528483,
+    "rmse_warped": 0.26531479909395084
+  },
+  "meta": {
+    "dataset": "kvs",
+    "split": "interp",
+    "model": "mamba_1phase4k_clean",
+    "seed": 3,
+    "target_type": "field",
+    "created_utc": "2026-09-07T21:55:10.689489+00:00",
+    "train_wallclock_s": 4056.044595479965,
+    "infer_latency_ms": 383.6302014364712,
+    "config_hash": "5cfa72d0cf5338d9",
+    "n_params": 4431520,
+    "encoder_ref": "results/benchmark/encoders_clean/kvs_interp_convae_83x442_bc32_47132e7b07.pt",
+    "dynamics": "mamba_branch_don",
+    "best_epoch": 3700,
+    "control_source": "theta_reconstruct",
+    "theta_free": false
+  }
+}
